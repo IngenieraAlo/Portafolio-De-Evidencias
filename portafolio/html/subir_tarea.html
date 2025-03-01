@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Tarea</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script>
+        function obtenerMateria() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const materia = urlParams.get('materia');
+            document.getElementById('titulo').innerText = `Subir Tarea - Materia ${materia.toUpperCase()}`;
+            document.getElementById('materia').value = materia;
+        }
+    </script>
+</head>
+<body onload="obtenerMateria()">
+    <h1 id="titulo">Subir Tarea</h1>
+    <form action="subir_tarea.php" method="POST" enctype="multipart/form-data">
+        <input type="hidden" id="materia" name="materia">
+        <label for="archivo">Selecciona tu archivo:</label>
+        <input type="file" id="archivo" name="archivo" required>
+        <button type="submit">Subir</button>
+    </form>
+</body>
+</html>

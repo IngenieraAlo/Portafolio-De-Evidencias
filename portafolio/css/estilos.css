@@ -1,0 +1,120 @@
+/* estilos.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.cv-img {
+    width: 60%;
+    max-width: 600px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* parte 2 en estilos*/
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+@keyframes starfield {
+    0% { background-position: 0 0; }
+    50% { background-position: 0 100%; }
+    100% { background-position: 0 0; }
+}
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/eight-glossy-stars-different-colors-on-a-white-background-set-of-star-icons-in-cartoon-style-vector.jpg') repeat;
+    animation: starfield 60s linear infinite; 
+    opacity: 0.8; 
+}
+.menu-container {
+    text-align: center;
+    padding: 60px 40px;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    z-index: 1; 
+}
+h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 18px 40px; 
+    font-size: 1.3rem; 
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    max-width: 350px; 
+    margin: 0 auto;
+}
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1); 
+}
+button:active {
+    transform: scale(0.95); 
+}
